@@ -110,7 +110,7 @@ public class TestGooglePlayCrawler {
 
 	@Test(dependsOnMethods = { "shouldLogin" })
 	public void shouldFetchPermissions() throws Exception {
-		DetailsResponse details = service.details("com.mobulasoft.criticker");
+		DetailsResponse details = service.details("com.evernote");
 		AppDetails appDetails = details.getDocV2().getDetails().getAppDetails();
 		Assert.assertFalse(appDetails.getPermissionList().isEmpty());
 	}
